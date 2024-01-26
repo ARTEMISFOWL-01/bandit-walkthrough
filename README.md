@@ -5,8 +5,8 @@
 <p>we were required to access the server of bandit with username as bandit0 with port 2220 and password bandit0
 hostname is bandit.labs.overthewire.org <br>
 it can be done by using command <br>
->ssh bandit0@bandit.labs.overthewire.org -p 2220
-password bandit0 <br>
+" ssh bandit0@bandit.labs.overthewire.org -p 2220
+password bandit0 "<br>
 ssh= command to remotely access a server <br>.
 
 ## level 0-1<br>
@@ -36,3 +36,17 @@ hidden file is ".hidden" now use "cat .hidden" to get password.<br>
 password is "2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe", now then logout and login as bandit4 with this password.<br>
 
 ## level 4-5<br>
+
+The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.<br>
+first v=change home directory to inhere directory<br>
+
+> cd inhere<br>
+> now there are many files in inhere but target one is human-readable so by using command to get type of all files we can find our file<br>
+> file ./-file\*<br>
+> this command will print types of all files having "file"in their name. the required file is -file07. using escape character to access it.<br>
+> cat ./-file07<br>
+> password<br>
+> lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR<br>
+> now again logout and again login as bandits5 with this password.<br>
+
+## level 5-6<br>
