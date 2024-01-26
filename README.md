@@ -40,13 +40,13 @@ password is "2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe", now then logout and login as ban
 The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.<br>
 first v=change home directory to inhere directory<br>
 
-> cd inhere<br>
-> now there are many files in inhere but target one is human-readable so by using command to get type of all files we can find our file<br>
-> file ./-file\*<br>
-> this command will print types of all files having "file"in their name. the required file is -file07. using escape character to access it.<br>
-> cat ./-file07<br>
-> password<br>
-> lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR<br>
-> now again logout and again login as bandits5 with this password.<br>
+cd inhere<br>
+now there are many files in inhere but target one is human-readable so by using command to get type of all files we can find our file<br>
+file ./-file\*<br>
+this command will print types of all files having "file"in their name. the required file is -file07. using escape character to access it.<br>
+cat ./-file07<br>
+password<br>
+lrIWWI6bB37kxfiCQZqUdOIYfr6eEeqR<br>
+now again logout and again login as bandits5 with this password.<br>
 
 ## level 5-6<br>
