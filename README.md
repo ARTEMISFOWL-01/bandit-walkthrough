@@ -5,7 +5,7 @@
 <p>we were required to access the server of bandit with username as bandit0 with port 2220 and password bandit0
 hostname is bandit.labs.overthewire.org <br>
 it can be done by using command <br>
-> ssh bandit0@bandit.labs.overthewire.org -p 2220
+>ssh bandit0@bandit.labs.overthewire.org -p 2220
 password bandit0 <br>
 ssh= command to remotely access a server <br>.
 
@@ -36,5 +36,3 @@ hidden file is ".hidden" now use "cat .hidden" to get password.<br>
 password is "2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe", now then logout and login as bandit4 with this password.<br>
 
 ## level 4-5<br>
-
-'''hjbkjhnkljholihjolijolihjolj'''
