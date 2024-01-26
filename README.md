@@ -6,7 +6,7 @@
 hostname is bandit.labs.overthewire.org <br>
 it can be done by using command <br>
 > ssh bandit0@bandit.labs.overthewire.org -p 2220
-password bandit0 <
+password bandit0 
 
 
 ##level 1-2<br>
