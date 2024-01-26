@@ -1,6 +1,4 @@
- bandit-walkthrough
-
-just playing bandit
+ #=Bandit-Walkthrough --Abhay 
 
 ##level 0-1<br>
 
