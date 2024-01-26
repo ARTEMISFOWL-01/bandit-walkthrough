@@ -30,10 +30,10 @@ and the password we get is "aBZ0W5EmUfAf7kHTQeOwd8bauFJ2lAiG".now agin logout an
 
 ## level 3-4<br>
 
-<dsdcsdc
-The password for the next level is stored in a hidden file in the inhere directory. First change your current home directory to inhere directory by using "cd" command as "cd inhere".<br>
-now to see hidden files in this directory use "ls -a", -a option will let us see hidden files.<br>
-hidden file is ".hidden" now use "cat .hidden" to get password.<br>
-password is "2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe", now then logout and login as bandit4 with this password.<br>
+> dsdcsdc
+> The password for the next level is stored in a hidden file in the inhere directory. First change your current home directory to inhere directory by using "cd" command as "cd inhere".<br>
+> now to see hidden files in this directory use "ls -a", -a option will let us see hidden files.<br>
+> hidden file is ".hidden" now use "cat .hidden" to get password.<br>
+> password is "2EW7BBsr6aMMoJ2HjW067dm8EgX26xNe", now then logout and login as bandit4 with this password.<br>
 
 ## level 4-5<br>
