@@ -10,6 +10,7 @@ password bandit0" <br>
 ssh= command to remotely access a server <br.
 
 ##level 0-1<br>
-The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
-<dsf
+<p>The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.<br>
+use "ls" for seeing files in home directory and then use "cat readme" to get the password in this file and copy it. To exit logout use "exit".<br>
+
 
