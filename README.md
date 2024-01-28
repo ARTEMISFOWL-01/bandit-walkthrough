@@ -70,9 +70,38 @@ now login as bandit6 using this password.<br>
 owned by user bandit7<br>
 owned by group bandit6<br>
 33 bytes in size<br>
-for this we can use find command with user and group as option to tell ownership of file and thentype and size, but this will print some wrror messages to gt rid of that we will append 2>/dev/null that will redirect all error mesages to dev null file <br>
+for this we can use find command with user and group as option to tell ownership of file and thentype and size, but this will print some error messages to gt rid of that we will append "2>/dev/null" at the end of find command that will redirect all error mesages to dev null file <br>
 "find / -user bandit7 -group bandit6 -type f -size 33c 2>/dev/null<br>"
 output is "/var/lib/dpkg/info/bandit7.password"<br>
 using cat command to get the content of file<br>
 cat /var/lib/dpkg/info/bandit7.password<br>
-password: ""
+password: "z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S"<br>
+now logout and again login as bandit7 with this password.<br>
+
+## level 7-8 <br>
+
+The password for the next level is stored in the file data.txt next to the word millionth<br>
+we can use "grep" command to find string containg required pattern in data.txt<br>
+grep "millionth" data.txt<br>
+password: "TESKZC0XvTetK0S9xNwm25STk5iWrBvP"<br>
+Now again logout and login as bandit8 with this password<br>
+
+## level 8-9<br>
+
+The password for the next level is stored in the file data.txt and is the only line of text that occurs only once<br>
+Here we can use piping with commands sort and uniq.<br>
+we will be using "-c" option with uniq to get number of lines<br>
+sort data.txt | uniq -c <br>
+after this we can easily find the required password for next level we can also use grep but not necessary.
+pssword: "EN632PlfYiZbn3PhVK3XOGSlNInNE00t"<br>
+Now again logout and login as bandit9 with this password.<br>
+
+## level 9-10 <br>
+
+The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.<br>
+we can here again use piping with "strings" and "grep" function. "strings" will see for sequence of printable characters and then we can use "grep" for finding strings with more then one = sign.<br>
+strings data.txt | grep "=="<br>
+password: "G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s"<br>
+Now again logout and login as bandit10 with this password.<br>
+
+## level 10-11 <br>
