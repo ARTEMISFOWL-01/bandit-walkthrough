@@ -105,3 +105,24 @@ password: "G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s"<br>
 Now again logout and login as bandit10 with this password.<br>
 
 ## level 10-11 <br>
+
+The password for the next level is stored in the file data.txt, which contains base64 encoded data<br>
+
+to decrypt a base64 file we can use "base64 -d" "-d" option is use to decrypt<br>
+base64 -d data.txt<br>
+password: "6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM"<br>
+Now again logout and login as bandit11 with this password.<br>
+
+## level 11-12 <br>
+
+<p>the password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions.<br>
+
+As characters are rotated by 13 positions we dont have any command to directly decrypt it so we will use "tr" command.<br>
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'<br>
+A-is converted to N and so on.<br>
+password: "JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv"<br>
+Now again logout and login as bandit12 with this password.<br>
+
+## level 12-13<br>
+
+<p>The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!)<br>
