@@ -126,3 +126,50 @@ Now again logout and login as bandit12 with this password.<br>
 ## level 12-13<br>
 
 <p>The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work using mkdir. For example: mkdir /tmp/myname123. Then copy the datafile using cp, and rename it using mv (read the manpages!)<br>
+we will first create a directory name new in tmp and copy the data.txt there and work on it.<br>
+
+mkdir /tmp/new<br>
+cd /tmp/anew<br>
+cp ~/data.txt new.txt<br>
+
+<p>now we have a hexadump file then lets convert it to binary using xxd and storing in another place<br>
+
+xxd -r new.txt new<br>
+
+<p>after seeing signature of file we can apply the required unizip command.We have bzip2 and gzip now we will apply any whenever required.<br>
+
+-mv new new.gz<br>
+-gzip -d new.gz<br>
+(now file is bzip2)<br>
+-mv new new.bz2<br>
+-bzip2 -d new.bz2<br>
+(now file is gzip)<br>
+-mv new new.gz<br>
+-gzip -d new.gz<br>
+
+ <p>now we will again seee signature of file but we can saw a file in its header,so to get that out of this archive we will use "tar -xf", first lets rename it.<br>
+
+-mv new new.tar<br>
+-tar -xf new.tar<br>
+
+ <p>(now data5.bin is also a archive having data6.bin after seeing through xxd command.)<br>
+
+-tar -xf data5.bin<br>
+
+ <p>now data6.bin is also ziped so lets repeat the same process above.<br>
+ mv data6.bin data.bz2<br>
+ bzip2 -d data.bz2<br>
+ xxd data<br>
+ <p>now by using xxd command we found that data also has daat8.bin file so unziping this archive.<br>
+
+tar -xf data<br>
+
+#### decompressing data8.bin<br>
+
+mv data8.bin data8.gz<br>
+gzip -d data8.gz<br>
+cat data8<br>
+password: "wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw"
+now again logout and login as bandit13<br>
+
+## level 13-14<br>
