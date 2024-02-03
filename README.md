@@ -173,3 +173,39 @@ password: "wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw"
 now again logout and login as bandit13<br>
 
 ## level 13-14<br>
+
+<p>The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on<br>
+
+we will be using "-i" option with ssh to use private key nad login to host localhost.<br>
+ls<br>
+sshkey.private(private key)<br>
+ssh -i sshkey.private bandit14@localhost -p 2220<br>
+cat /etc/bandit_pass/bandit14<br>
+password: "fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq"
+
+## level 14-15<br>
+
+<p>The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.<br>
+
+to write on internet we use nc command also called "netcat"<br>
+nc localhost 30000<br>
+fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq<br>
+"correct password"<br>
+password: "jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt"<br>
+now logout and login as bandit15 using this password.<br>
+
+## level 15-16<br>
+
+<p>The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption.
+
+Helpful note: Getting “HEARTBEATING” and “Read R BLOCK”? Use -ign_eof and read the “CONNECTED COMMANDS” section in the manpage. Next to ‘R’ and ‘Q’, the ‘B’ command also works in this version of that command…<br>
+
+we can use "ncat" here which is newer version of nc.<br>
+ncat --ssl localhost 30001<br>
+jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt<br>
+password: "JQttfApK4SeyHwDlI9SXGR50qclOAil1"<br>
+now logout and again login as bandit16<br>
+
+## level 16-17<br>
+
+<p>The credentials for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000. First find out which of these ports have a server listening on them. Then find out which of those speak SSL and which don’t. There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it.<br>
